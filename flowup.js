@@ -1,6 +1,7 @@
-/* FlowUp
+/* 
+ * FlowUp
  *
- * Based on Eric Wenn's PullupScroll (https://github.com/ericwenn/pullupscroll)
+ * Based on Eric Wenn's PullupScroll https://github.com/ericwenn/pullupscroll)
  * Changes include: 
  * - custom namespace for functions
  * - Not dependent on "$" jquery namespace
@@ -9,6 +10,7 @@
  * - Added ability to control plugin via external CSS instead appending <head>
  * 
  */
+
 var dgPull = dgPull || {};
 
 (function($) {$(document).ready(function() {
@@ -18,7 +20,7 @@ var dgPull = dgPull || {};
  })(jQuery);
 
 (function ( $ ) {
-    $.fn.pullupScroll = function(e,options) {
+    $.fn.flowUp = function(e,options) {
       var settings = $.extend({
         // Default
         translateY: 150,
@@ -40,7 +42,7 @@ var dgPull = dgPull || {};
     // If external CSS is not used, add CSS to head
     if(!settings.externalCSS)
     {
-      $("head").append('<style>.come-in{-ie-transform:translateY('+settings.translateY+'px);-webkit-transform:translateY(250px);transform:translateY(250px);-webkit-animation:come-in .8s ease forwards;animation:come-in .8s ease forwards}.come-in:nth-child(odd){-webkit-animation-duration:.6s;animation-duration:.6s}.already-visible{-ie-transform:translateY(0);-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation:none;animation:none}@-webkit-keyframes come-in{to{-ie-transform:translateY(0);-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes come-in{to{-ie-transform:translateY(0);-webkit-transform:translateY(0);transform:translateY(0)}}</style>');
+      $("head").append('<style>.come-in{opacity: 1; -ie-transform:translateY('+settings.translateY+'px);-webkit-transform:translateY('+settings.translateY+'px);transform:translateY('+settings.translateY+'px);-webkit-animation:come-in '+settings.duration+'s ease forwards;animation:come-in '+settings.duration+'s ease forwards}.come-in:nth-child(odd){-webkit-animation-duration:'+settings.duration+'s;animation-duration:'+settings.duration+'s}.already-visible{opacity: 1;-ie-transform:translateY(0);-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation:none;animation:none}@-webkit-keyframes come-in{to{-ie-transform:translateY(0);-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes come-in{to{-ie-transform:translateY(0);-webkit-transform:translateY(0);transform:translateY(0)}} .opaque { opacity: 0; }</style>');
     }
     return this;
     };

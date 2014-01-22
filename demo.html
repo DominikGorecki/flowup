@@ -1,0 +1,64 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+<title>FlowUp Demo</title>
+<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<style>
+  /* This style is NOT part of the FlowUp plugin and it's only for the demo */
+  body p 
+  {
+    height: 10em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 10em;
+    font-family: 'Rock Salt', cursive;
+    font-size: 1.5em;
+    margin: 2em 1em;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+  }
+
+  body p:nth-child(odd)
+  {
+    color: #403F31;
+    background: #A3C6BE;
+  }
+
+  body p:nth-child(even)
+  {
+    background: #87A18E;
+    color: #000;
+  }
+</style>
+<script>
+  $(document).ready(function() {
+    $("body").flowUp("p", { transalteY: 350, duration: 1 });
+  });
+</script>
+</head>
+
+<body>
+
+<p>Thi is a simple jQuery plugin</p>
+<p>that creates an effect of elements</p>
+<p>flowing up as the user scrolls down.</p>
+<p>This is a similar effect to the one</p>
+<p>used by the google+ app on android.</p>
+<p>By</p>
+<p><a href="http://www.dominikgorecki.com">Dominik Gorecki</a></p>
+<p><a href="http://www.dominikgorecki.com/flow-up">Documentation / Download</a></p>
+<p>Based on a plugin by <a href="https://github.com/ericwenn/pullupscroll">Eric Wenn</a></p>
+<p>* A number of issues fixed</p>
+<p>* Settings added</p>
+
+</body>
+<script src="flowup.js"></script>
+</html>
