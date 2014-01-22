@@ -1,5 +1,5 @@
 {
-    "name": "FlowUp",
+    "name": "flowup",
     "title": "Content flows up as you scroll down.",
     "description": "A similar effect to the one on the Google+ android app, the content flows up as you scroll down. A similar effect can also be seen on some well-done infinite scroll. This creates that effect without using infinite scroll.",
     "keywords": [
@@ -8,7 +8,7 @@
         "flow",
         "fly-in",
         "slide-in",
-        "slide up",
+        "slide-up",
         "slide"
     ],
     "version": "1.0.1",
