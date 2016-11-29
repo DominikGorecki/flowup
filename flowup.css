@@ -39,18 +39,20 @@
   opacity: 1;
 }
 
-@-webkit-keyframes come-in { to {
+@-webkit-keyframes come-in { 
+  to {
       -ie-transform:translateY(0);
       -webkit-transform:translateY(0);
-      transform:translateY; (0)
-    }}
+      transform:translateY(0);
+    }
+  }
 
 @keyframes come-in{
   to{
     -ie-transform:translateY(0);
     -webkit-transform:translateY(0);
-    transform:translateY(0)
+    transform:translateY(0);
   }
-  } 
+} 
 
 
